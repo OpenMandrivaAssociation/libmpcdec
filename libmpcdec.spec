@@ -1,39 +1,35 @@
-%define name	libmpcdec
-%define version	1.2.6
-%define release %mkrel 1
-
-%define major	5
+%define major 5
 %define libname %mklibname mpcdec %{major}
 %define develname %mklibname mpcdec -d
 
-Name: 	 	%{name}
-Summary: 	Portable Musepack decoder library
-Version: 	%{version}
-Release: 	%{release}
-Source:		http://files.musepack.net/source/%{name}-%{version}.tar.bz2
-URL:		http://www.musepack.net/
+Summary:	Portable Musepack decoder library
+Name:		libmpcdec
+Version:	1.2.6
+Release:	%mkrel 1
 License:	BSD
 Group:		System/Libraries
+URL:		http://www.musepack.net/
+Source:		http://files.musepack.net/source/%{name}-%{version}.tar.bz2
 BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 
 %description
 Portable Musepack decoder library.
 
-%package -n 	%{libname}
-Summary:        Dynamic libraries from %{name}
-Group:          System/Libraries
+%package -n %{libname}
+Summary:	Dynamic libraries from %{name}
+Group:		System/Libraries
 
 %description -n %{libname}
 Dynamic libraries from %{name}.
 
-%package -n 	%{develname}
-Summary: 	Header files and static libraries from %{name}
-Group: 		Development/C
-Requires: 	%{libname} >= %{version}-%{release}
-Provides: 	%{name}-devel = %{version}-%{release}
-Provides: 	lib%{name}-devel = %{version}-%{release}
-Obsoletes: 	%mklibname mpcdec 5 -d
-Provides: 	%mklibname mpcdec 5 -d
+%package -n %{develname}
+Summary:	Header files and static libraries from %{name}
+Group:		Development/C
+Requires:	%{libname} >= %{version}-%{release}
+Provides:	%{name}-devel = %{version}-%{release}
+Provides:	lib%{name}-devel = %{version}-%{release}
+Obsoletes:	%mklibname mpcdec 5 -d
+Provides:	%mklibname mpcdec 5 -d
 
 %description -n %{develname}
 Libraries and includes files for developing programs based on %{name}.
@@ -42,10 +38,6 @@ Libraries and includes files for developing programs based on %{name}.
 %setup -q
 
 %build
-%if %mdkversion <= 1000
-%define __libtoolize true
-%endif
-
 %configure2_5x
 
 %make
