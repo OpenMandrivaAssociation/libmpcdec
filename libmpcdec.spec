@@ -10,7 +10,6 @@ License:	BSD
 Group:		System/Libraries
 URL:		http://www.musepack.net/
 Source:		http://files.musepack.net/source/%{name}-%{version}.tar.bz2
-BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 
 %description
 Portable Musepack decoder library.
