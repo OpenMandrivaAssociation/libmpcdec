@@ -5,7 +5,7 @@
 Summary:	Portable Musepack decoder library
 Name:		libmpcdec
 Version:	1.2.6
-Release:	%mkrel 3
+Release:	%mkrel 4
 License:	BSD
 Group:		System/Libraries
 URL:		http://www.musepack.net/
