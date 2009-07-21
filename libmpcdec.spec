@@ -27,6 +27,7 @@ Summary:	Header files and static libraries from %{name}
 Group:		Development/C
 Requires:	%{libname} >= %{version}-%{release}
 Provides:	%{name}-devel = %{version}-%{release}
+Obsoletes:	%mklibname mpcdec 3 -d
 Obsoletes:	%mklibname mpcdec 5 -d
 Provides:	%mklibname mpcdec 5 -d
 
