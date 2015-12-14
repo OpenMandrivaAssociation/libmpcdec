@@ -2,6 +2,9 @@
 %define libname	%mklibname mpcdec %{major}
 %define devname	%mklibname mpcdec -d
 
+%define _disable_rebuild_configure 1
+%define _disable_lto 1
+
 Summary:	Portable Musepack decoder library
 Name:		libmpcdec
 Version:	1.2.6
