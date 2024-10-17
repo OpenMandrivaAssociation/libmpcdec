@@ -11,7 +11,7 @@ Version:	1.2.6
 Release:	25
 License:	BSD
 Group:		System/Libraries
-Url:		http://www.musepack.net/
+Url:		https://www.musepack.net/
 Source0:	http://files.musepack.net/source/%{name}-%{version}.tar.bz2
 
 %description
